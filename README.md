@@ -1,6 +1,6 @@
-# 📝 TaskX
+# 📝 TaskX - Persistent To-Do List Web App
 
-A clean, modern, and lightweight To-Do List web application designed to help users manage daily tasks with real-time feedback and dynamic DOM manipulation.
+A clean, modern, and lightweight To-Do List application designed to help users manage daily tasks with real-time feedback, responsive UI, and persistent browser storage.
 
 ---
 
@@ -10,31 +10,44 @@ A clean, modern, and lightweight To-Do List web application designed to help use
 
 ---
 
-## ✨ Features
+## 🚀 Key Features
 
-- **Add Tasks:** Quick task entry with validation to prevent empty submissions.
-- **Task Completion:** Interactive checkboxes that visually strike through finished items using modern CSS styling.
-- **Delete Tasks:** Remove individual tasks instantly with dynamic feedback messages.
-- **Interactive Feedback:** Contextual success and warning messages for user actions.
-- **Responsive Design:** Clean, centered layout powered by CSS Flexbox and custom CSS variables.
-
----
-
-## 🛠️ Built With
-
-- **HTML5:** Semantic document structure
-- **CSS3:** Custom properties (`:root`), Flexbox layout, and modern `:has()` selectors
-- **JavaScript (ES6):** Dynamic DOM manipulation and event handling
-- **Font Awesome:** Minimalist vector icons
+- **Browser Data Persistence:** Automatically saves all active tasks to `localStorage` so your list stays intact even after closing or refreshing the browser.
+- **Task Input Validation:** Validates user entries to prevent empty submissions and displays warning messages.
+- **Strike-Through Completion:** Mark tasks as completed using interactive checkboxes.
+- **Key-Bound Deletion:** Delete individual tasks using unique key identifiers to ensure accurate removal from storage.
+- **Clear All Shortcut:** Instantly wipe all active tasks and reset internal counters using a double-click shortcut on the **Clear** button.
+- **Keyboard Navigation:** Support for quick task entry via the `Enter` key and initial input auto-focus.
 
 ---
 
-## 📌 Upcoming Improvements
+## 🛠️ Tech Stack
 
-- [ ] `localStorage` integration to persist tasks across browser reloads
-- [ ] Active task counter tracking total vs. completed items
-- [ ] Inline task editing functionality
-- [ ] Category filter tabs (**All**, **Active**, **Completed**)
+- **HTML5:** Semantic document layout
+- **CSS3:** Flexbox layouts, `:root` variable themes, and modern `:has()` parent selectors
+- **JavaScript (ES6):** Dynamic DOM manipulation, closure scope key binding, event listeners, and `localStorage` API
+- **Font Awesome:** Minimalist vector icon graphics
+
+---
+
+## 📖 How to Use
+
+1. Type your task inside the auto-focused text input box.
+2. Press **+ Add** or hit **Enter** to add the task to your list.
+3. Check the checkbox next to a task to toggle strike-through completion.
+4. Click the **Trash Icon** on any item to delete that specific task.
+5. **Double-click** the **Clear** button to wipe all saved tasks from storage and reset the app.
+
+---
+
+## 📁 Project Structure
+
+```text
+TaskX/
+├── index.html     # Semantic HTML layout and container setup
+├── style.css      # Theme variables, flexbox grid, and element styles
+├── app.js         # DOM manipulation, event listeners, and localStorage logic
+└── README.md      # Comprehensive project documentation
 
 ---
 
