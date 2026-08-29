@@ -63,16 +63,16 @@ body {
 }
 
 #error-msg p {
-  color: red;
-  font-size: 14px;
+  color: rgb(255, 0, 0);
+  font-size: 16px;
   margin: 0;
 }
-#add-btn {
+.btns {
   background-color: var(--btn-background-color);
   color: var(--btn-color);
   border: none;
   outline: none;
-  padding: 0.6rem 1.5rem 0.4rem 1.5rem;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
   text-align: center;
   border-radius: 8px;
   font-size: 16px;
