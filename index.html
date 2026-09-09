@@ -19,8 +19,11 @@
             </div>
             <div class="newtodo">
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Type your new task" id="input-el" autofocus>
-                    <div id="error-msg"></div>
+                    <input type="text" placeholder="Type your new task" id="input-el" maxlength="100" autofocus>
+                    <div class="input-texts">
+                        <div id="error-msg"></div>
+                        <p class="characters" id="display-characters">0/100 Characters</p>
+                    </div>
                 </div>
                 <button class="btns" id="add-btn">+ Add</button>
                 <button class="btns" id="clear-btn">Clear</button>
