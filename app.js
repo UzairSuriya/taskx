@@ -3,6 +3,7 @@ const clearBtn = document.getElementById("clear-btn");
 const inputEl = document.getElementById("input-el");
 const container = document.querySelector(".container");
 const errorMsg = document.getElementById("error-msg");
+const displayChar = document.getElementById("display-characters");
 const errMsg = document.createElement("p");
 const allTodos = document.createElement("div");
 allTodos.classList.add("todos");
@@ -46,17 +47,20 @@ function storeTask(taskText, taskKey) {
 
 addBtn.addEventListener("click", () => {
   if (inputEl.value.trim() === "") {
-    errMsg.style.color = "red";
+    errMsg.style.color = "rgb(255, 0, 0)";
     errMsg.innerText = "Please Enter New Task";
     errorMsg.appendChild(errMsg);
     inputEl.value = "";
   } else {
+    displayCharacters();
     count++;
     const taskText = inputEl.value.trim();
     newTask(taskText, count);
     storeTask(taskText, count);
     inputEl.value = "";
     errMsg.textContent = "";
+    displayChar.textContent = `0/100 Characters`;
+    displayChar.style.color = "rgb(51, 51, 51)";
   }
 });
 
@@ -72,6 +76,7 @@ clearBtn.addEventListener("dblclick", () => {
   allTodos.remove();
   inputEl.focus();
   count = 0;
+  displayChar.textContent = `0/100 Characters`;
 });
 
 function render() {
@@ -87,5 +92,22 @@ function render() {
     }
   }
 }
+
+function displayCharacters() {
+  const characters = inputEl.value.length;
+  displayChar.innerText = `${characters}/100 Characters`;
+  if (characters === 100) {
+    displayChar.style.color = "rgb(255, 0, 0)";
+  } else {
+    displayChar.style.color = "rgb(51, 51, 51)";
+  }
+  let text =
+    "Well, I finished my 100 days project (hooray!) so now I’m expanding";
+  console.log(text.toUpperCase())
+}
+
+window.addEventListener("input", function () {
+  displayCharacters();
+});
 
 render();
