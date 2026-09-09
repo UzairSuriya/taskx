@@ -3,7 +3,7 @@
 :root {
   --primary-color: #f3f4f6;
   --secondary-color: #ffffff;
-  --text-primary-color: #333333;
+  --text-primary-color: rgb(51, 51, 51);
   --text-secondary-color: #a9a9a9;
   --btn-background-color: #000000;
   --btn-color: #ffffff;
@@ -35,17 +35,26 @@ body {
 }
 .newtodo {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   gap: 12px;
 }
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 16rem;
+}
+.input-texts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  width: 100%;
 }
 #input-el {
-  width: 16rem;
-  padding: 0.8rem 2.8rem 0.8rem 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -58,13 +67,14 @@ body {
   color: var(--text-secondary-color);
 }
 #error-msg {
-  margin-top: 4px;
-  padding-left: 4px;
+  margin-top: 0;
+  padding-left: 0;
+  white-space: nowrap;
 }
 
 #error-msg p {
   color: rgb(255, 0, 0);
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
 }
 .btns {
@@ -103,8 +113,18 @@ body {
 }
 .todo-text {
   color: var(--text-primary-color);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
 }
 .delete-btn {
   margin-left: auto;
   cursor: pointer;
+}
+.characters {
+  color: var(--text-primary-color);
+  margin-top: 0;
+  margin-left: auto;
+  font-size: 13px;
+  white-space: nowrap;
 }
